@@ -2210,10 +2210,15 @@ select:focus {
 
 .chat-workspace {
   overflow: hidden;
-  background: white;
-  border: 1px solid var(--border);
+  color: var(--night);
+  background: #fffaf2;
+  border: 1px solid rgba(143, 102, 27, 0.52);
   border-radius: 22px;
   box-shadow: var(--shadow);
+}
+
+.chat-workspace strong {
+  color: var(--night);
 }
 
 .chat-thread {
@@ -2234,14 +2239,17 @@ select:focus {
 }
 
 .chat-bubble.assistant {
-  background: #f3f0ff;
+  color: #18130d;
+  background: #f1dfc1;
+  border: 1px solid #bd8d35;
   border-bottom-left-radius: 5px;
 }
 
 .chat-bubble.user {
   justify-self: end;
-  color: white;
-  background: var(--accent);
+  color: #fff9ed;
+  background: #15130f;
+  border: 1px solid #15130f;
   border-bottom-right-radius: 5px;
 }
 
@@ -2286,12 +2294,13 @@ select:focus {
 }
 
 .typing {
-  color: var(--muted);
+  color: #3d3327;
 }
 
 .chat-input-row {
   padding: 15px;
-  border-top: 1px solid var(--border);
+  background: #f4e8d5;
+  border-top: 1px solid rgba(143, 102, 27, 0.42);
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: end;
@@ -2302,12 +2311,36 @@ select:focus {
   width: 100%;
   padding: 13px;
   resize: vertical;
-  color: var(--ink);
-  background: #faf9fd;
-  border: 1px solid var(--border);
+  color: #111114;
+  background: #fffdf8;
+  border: 2px solid #9c7328;
   border-radius: 13px;
   font: inherit;
   line-height: 1.5;
+}
+
+.chat-input-row textarea::placeholder {
+  color: #5f574d;
+  opacity: 1;
+}
+
+.chat-input-row .primary-button {
+  color: #fff9ed;
+  background: #15130f;
+  border-color: #15130f;
+}
+
+.chat-input-row .primary-button:hover {
+  color: #15130f;
+  background: var(--accent-light);
+  border-color: var(--accent-dark);
+}
+
+.chat-input-row .primary-button:disabled {
+  color: #504534;
+  background: #dac59f;
+  border-color: #9c835b;
+  opacity: 1;
 }
 
 .task-hero {
